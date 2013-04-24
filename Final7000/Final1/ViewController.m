@@ -26,6 +26,7 @@
 @synthesize Text11;
 @synthesize Text12;
 @synthesize Text13;
+@synthesize Text14;
 
 UITextField *Text1;
 UITextField *Text2;
@@ -40,6 +41,7 @@ UITextField *Text10;
 UITextField *Text11;
 UITextField *Text12;
 UITextField *Text13;
+UITextField *text14;
 
 float Total;
 int Hamburger;
@@ -160,6 +162,26 @@ int LargeDrink;
 
 - (IBAction)Button9:(id)sender {
     Total = Total + LargeDrink;
+}
+
+- (IBAction)Change2:(id)sender {
+    float Change1;
+    float amount;
+    amount = [Text14.text floatValue];
+    Change1 = Total - amount;
+    Change1 = -1*Change1;
+    
+    NSString *strFromInt = [NSString stringWithFormat:@"$ %.2f",Change1];
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"Change"
+                               message:strFromInt
+                              delegate:self
+                     cancelButtonTitle:@"Done"
+                     otherButtonTitles:nil] ;
+    [alert show];
+    [alert release];
+    
+    
 }
 
 - (IBAction)DispTotal:(id)sender {

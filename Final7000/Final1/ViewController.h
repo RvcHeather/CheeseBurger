@@ -22,8 +22,11 @@
 - (IBAction)Button8:(id)sender;
 - (IBAction)Button9:(id)sender;
 
+- (IBAction)Button10:(id)sender;
+
 - (IBAction)DispTotal:(id)sender;
 - (IBAction)Init1:(id) sender;
+- (IBAction)Change2:(id)sender;
 
 -(NSString *) documentsPath;
 -(NSString *) readFromFile:(NSString *) filePath;
@@ -43,5 +46,6 @@
 @property(nonatomic, retain) IBOutlet UITextField *Text10;
 @property(nonatomic, retain) IBOutlet UITextField *Text12;
 @property(nonatomic, retain) IBOutlet UITextField *Text13;
+@property(nonatomic, retain) IBOutlet UITextField *Text14;
 @end
 
